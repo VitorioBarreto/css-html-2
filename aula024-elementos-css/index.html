@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peronalizando links</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a {
+            color: #160f70;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    
+        a:visited {
+            color: pink;
+        }
+        a:hover {
+            color: #13116b;
+            text-decoration: underline;}
+        a:active {
+            color:aquamarine
+        }
+        a::after {color: blue;
+            content: '[link]';
+            text-decoration: none;
+            font-weight: normal
+    
+        }
+    </style>
+</head>
+<body>
+    <h1>personalizando links</h1>
+    <ul>
+        <li><a href="https://github.com/VitorioBarreto" target="_blank">Repositório GITHUB</a></li>
+        <li><a href="https://www.youtube.com/channel/UCqn6rnzV47jSJekMOluOHgg" target="_blank">Youtube</a></li>
+        <li><a href="https://www.instagram.com/vitotoso7/" target="_blank">Instagram</a></li>
+    </ul>
+    
+</body>
+</html>
