@@ -10,8 +10,16 @@
         }
 
         table {
-            width: 500px;
+            width: 400px;
             border-collapse: collapse;
+            position: relative;
+        /* position: relative serve para manter o cabeçalho fixo no topo */
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: rgba(26, 16, 16, 0.977);
         }
 
         td, th {
@@ -20,22 +28,43 @@
         }
 
         thead, tfoot {
-            background-color: rgba(128, 128, 128, 0.587);
+            background-color: rgb(16, 26, 19);
             color: white;
         }
+
         .num {
             text-align: right;
         }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: rgba(135, 206, 250, 0.084);
+            border: 1px solid rgba(0, 0, 0, 0.587);
+            
+        }
+
+        tbody > tr:nth-child(odd) {
+            background-color: rgba(128, 128, 128, 0.358);
+        } 
+        
+        tbody > tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.527);
+        } 
+        /* 2n é uma linha sim e uma não */
+
 
     </style>
 </head>
 <body>
     <h1>Uso de tabelas grandes</h1>
     <table>
+        <caption>População das unidades federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px;">População</th>
         
             </tr>
         </thead>
@@ -151,11 +180,12 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de habitantes</th>
+                <th scope="row">Total de habitantes</th>
                 <td class="num"><strong>203 062 512</strong></td>
             </tr>
            
         </tfoot>
     </table>
+    
 </body>
 </html>
