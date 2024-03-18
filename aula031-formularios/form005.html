@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="masc">
+                <label for="masc">Masculino</label> <br>
+            <input type="radio" name="sexo" id="fem">
+                <label for="fem">Feminino</label>
+                <!-- no NAME devo colocar a "classe" para não dar para marcar os dois RADIOS, isso só serve para RADIO -->
+        </fieldset>
+        <fieldset>
+            <legend>Esportes favoritos</legend>
+            <input type="checkbox" name="futebol" id="futebol">
+                <label for="futebol">Futebol </label> <br>
+            <input type="checkbox" name="basquete" id="basquete">
+                <label for="basquete">Basquete</label> <br>
+            <input type="checkbox" name="natacao" id="natacao">
+                <label for="natacao">Natação</label> <br>
+        </fieldset>
+
+
+        <p><input type="submit" value="Enviar"> <input type="reset" value="Apagar"></p>
+    </form>
+</body>
+</html>
